@@ -4,16 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    android:id="@+id/rlFondo">
 
     <TextView
         android:id="@+id/tvResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        android:layout_centerHorizontal="true"
         android:layout_above="@id/btn1_0"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
+        android:text=""
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="36dp"
@@ -21,99 +23,106 @@
 
     <Button
         android:id="@+id/btn1_1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerInParent="true"
         android:text=""
-        android:textSize="36dp"
-        android:textColor="@color/teal_200"/>
+        android:textSize="36sp"
+        android:textColor="@color/teal_200"
+        android:onClick="btn1_1_Click"/>
 
     <Button
         android:id="@+id/btn0_1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
         android:layout_toLeftOf="@id/btn1_1"
-
+        android:onClick="btn0_1_Click"
         android:text=""
-        android:textSize="36dp"
+        android:textSize="36sp"
         android:textColor="@color/teal_200"/>
 
     <Button
         android:id="@+id/btn2_1"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/btn1_1"
         android:layout_marginLeft="10dp"
         android:text=""
-        android:textSize="36dp"
+        android:onClick="btn2_1_Click"
+        android:textSize="36sp"
         android:textColor="@color/teal_200"/>
 
     <Button
         android:id="@+id/btn0_0"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_toLeftOf="@id/btn1_0"
         android:layout_above="@id/btn0_1"
         android:layout_marginRight="10dp"
         android:text=""
-        android:textSize="36dp"
+        android:onClick="btn0_0_Click"
+        android:textSize="36sp"
         android:textColor="@color/teal_200"/>
 
     <Button
         android:id="@+id/btn1_0"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
         android:layout_above="@id/btn1_1"
         android:text=""
-        android:textSize="36dp"
+        android:onClick="btn1_0_Click"
+        android:textSize="36sp"
         android:textColor="@color/teal_200"/>
 
     <Button
         android:id="@+id/btn2_0"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_toRightOf="@id/btn1_0"
         android:layout_above="@id/btn2_1"
         android:layout_marginLeft="10dp"
         android:text=""
-        android:textSize="36dp"
+        android:onClick="btn2_0_Click"
+        android:textSize="36sp"
         android:textColor="@color/teal_200"/>
 
     <Button
         android:id="@+id/btn0_2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@id/btn0_1"
         android:layout_toLeftOf="@id/btn1_2"
         android:layout_marginRight="10dp"
         android:text=""
-        android:textSize="36dp"
+        android:onClick="btn0_2_Click"
+        android:textSize="36sp"
         android:textColor="@color/teal_200"/>
 
     <Button
         android:id="@+id/btn1_2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@id/btn1_1"
         android:layout_centerHorizontal="true"
-
+        android:onClick="btn1_2_Click"
         android:text=""
-        android:textSize="36dp"
+        android:textSize="36sp"
         android:textColor="@color/teal_200"/>
 
     <Button
         android:id="@+id/btn2_2"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_below="@id/btn2_1"
         android:layout_toRightOf="@id/btn1_2"
         android:layout_marginLeft="10dp"
         android:text=""
-        android:textSize="36dp"
+        android:onClick="btn2_2_Click"
+        android:textSize="36sp"
         android:textColor="@color/teal_200"/>
 
     <Button
@@ -126,9 +135,39 @@
         android:backgroundTint="@color/purple_700"
         android:backgroundTintMode="add"
 
-        android:text="REINICIAR"
+        android:text="EMPEZAR"
         android:textSize="30dp"
-        app:rippleColor="@color/black" />
+        app:rippleColor="@color/black"
+        android:onClick="btnReset_Click"/>
+
+    <EditText
+        android:id="@+id/txtNombre2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/btnReset"
+        android:layout_marginBottom="5dp"
+        android:text="" />
+
+    <EditText
+        android:id="@+id/txtNombre1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/txtNombre2"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="" />
+
+    <RadioButton
+        android:id="@+id/rdbtnIA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IA"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"/>
 
 
 </RelativeLayout>
